@@ -1,0 +1,14 @@
+#dialog{
+    text-align: center;
+    background: #212121;
+    color:#dddddd;
+}
+
+#dialog button{
+    color:#dddddd;
+}
+
+#dialog button:hover{
+    background: #1a1a1a;
+
+}

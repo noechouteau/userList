@@ -1,0 +1,60 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%;    background: #0F0F11; overflow-x: hidden;}
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.mat-mdc-cell{
+    background: #212121 !important;
+    color: #dddddd !important;
+    border-bottom: 1px solid #292929 !important;
+
+    button {
+        background: #161616 !important;
+    }
+
+    button:hover {
+        border: 1px solid #818CF8 !important;
+    }
+
+    .Details{
+        color: #dddddd !important;
+    }
+
+    .Delete{
+        color: rgb(161, 63, 63) !important;
+    }
+
+    .Update{
+        color: rgb(73, 73, 128) !important;
+    }
+
+    .Copy{
+        color: rgb(74, 155, 74) !important;
+    }
+}
+
+.mat-mdc-header-cell, .mat-mdc-paginator-container{
+    background: #161616 !important;
+    color: #dddddd !important;
+}
+
+.mat-mdc-paginator .mat-mdc-select{
+    color: #dddddd !important;
+}
+
+.mat-mdc-table {
+    background: #212121 !important;
+}
+
+.mat-mdc-dialog-container{
+    background: #212121 !important;
+}
+
+.mat-mdc-icon-button .mat-mdc-button-persistent-ripple {
+    background: #aaaaaa;
+    z-index: -9;
+}
+
+.mat-mdc-paginator-range-actions{
+    gap: 15px;
+}

@@ -1,0 +1,42 @@
+<div id="page">
+
+    <h1>Add</h1>
+      <div id="card">
+        <form class="example-form" ngForm #userForm style="display: flex;
+        flex-direction: column;
+        gap: 46px;
+        top: -11px;
+        position: relative;">
+
+          <div class="coolinput">
+              <label for="input" class="text">Name</label>
+              <input type="text" placeholder="John" [(ngModel)] = "newName" name="name" class="input" (keyup.enter)="onSubmit()">
+          </div>
+  
+          <div class="coolinput">
+              <label for="input" class="text">Email</label>
+              <input type="text" placeholder="john.doe@gmail.com" [(ngModel)] = "newEmail" name="email" class="input" (keyup.enter)="onSubmit()">
+          </div>
+
+          <div class="coolinput">
+            <label for="input" class="text">Bio</label>
+            <input type="text" placeholder="This is an example bio." [(ngModel)] = "newBio" name="bio" class="input" (keyup.enter)="onSubmit()">
+          </div>
+
+          <div class="coolinput">
+            <label for="input" class="text">Occupation</label>
+            <input type="text" placeholder="Random job" [(ngModel)] = "newOccupation" name="occupation" class="input" (keyup.enter)="onSubmit()">
+          </div>
+
+          <div class="coolinput">
+            <label for="input" class="text">Avatar link (optionnal)</label>
+            <input type="text" placeholder="https://your-image.jpg" [(ngModel)] = "newAvatar" name="avatar" class="input" (keyup.enter)="onSubmit()">
+          </div>
+            
+        </form>
+      </div>
+  <div style="display: flex; gap:20px;top:20px;position:relative">
+    <button mat-stroked-button (click)="onSubmit()">Submit</button>
+    <button mat-stroked-button routerLink="/users" routerLinkActive="active" >Back</button>
+  </div>
+</div>

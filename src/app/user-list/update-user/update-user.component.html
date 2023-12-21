@@ -1,0 +1,58 @@
+<div id="page">
+  @if(selectedUser && selectedUser.name){
+    <h1>Update</h1>
+    <div id="cards">
+      <div id="card">
+        <img src="{{selectedUser.avatar}}" alt="avatar" width="180" height="180">
+            <br> <div class="champs"><strong>Name : </strong>{{selectedUser.name}}</div>
+            <br> <div class="champs"><strong>Email : </strong>
+                {{selectedUser.email}}</div>
+            <br><div class="champs"><strong>Bio : </strong>{{selectedUser.bio}}</div> 
+            <br><div class="champs"><strong>Occupation : </strong>{{selectedUser.occupation}}</div> 
+      </div>
+      <div id="card">
+        <form class="example-form" ngForm #userForm style="display: flex;
+        flex-direction: column;
+        gap: 46px;
+        top: -11px;
+        position: relative;">
+
+          <div class="coolinput">
+              <label for="input" class="text">Name</label>
+              <input type="text" placeholder={{selectedUser.name}} [(ngModel)] = "newName" name="name" class="input" (keyup.enter)="onSubmit()">
+          </div>
+  
+          <div class="coolinput">
+              <label for="input" class="text">Email</label>
+              <input type="text" placeholder={{selectedUser.email}} [(ngModel)] = "newEmail" name="email" class="input" (keyup.enter)="onSubmit()">
+          </div>
+
+          <div class="coolinput">
+            <label for="input" class="text">Bio</label>
+            <input type="text" placeholder={{selectedUser.bio}} [(ngModel)] = "newBio" name="bio" class="input" (keyup.enter)="onSubmit()">
+          </div>
+
+          <div class="coolinput">
+            <label for="input" class="text">Occupation</label>
+            <input type="text" placeholder={{selectedUser.occupation}} [(ngModel)] = "newOccupation" name="occupation" class="input" (keyup.enter)="onSubmit()">
+          </div>
+
+          <div class="coolinput">
+            <label for="input" class="text">Avatar</label>
+            <input type="text" placeholder={{selectedUser.avatar}} [(ngModel)] = "newAvatar" name="avatar" class="input" (keyup.enter)="onSubmit()">
+          </div>
+            
+        </form>
+      </div>
+  </div>
+  <div style="display: flex; gap:20px;top:20px;position:relative">
+    <button mat-stroked-button (click)="onSubmit()">Submit</button>
+    <button mat-stroked-button routerLink="/users" routerLinkActive="active" >Back</button>
+  </div>
+  }
+  @else {
+    <h1>This user does not exist</h1>
+    <button mat-stroked-button routerLink="/users" routerLinkActive="active" >Back</button>
+  }
+
+</div>

@@ -1,0 +1,30 @@
+
+<div id="wholePage">
+    <h1>WELCOME</h1>
+    <h3>to user-list.com</h3>
+
+    @if(logged == false){
+        <p>This is a simple user list app made with Angular.</p>
+        <p>First of all, please sign-in to see your data (check the README file for test logins)</p>
+        <form class="login-form" ngForm #loginForm style="display:flex;gap:5em">
+
+            <div class="coolinput">
+                <label for="input" class="text">Login</label>
+                <input type="text" [(ngModel)] = "username" name="login" class="input" (keyup.enter)="onSubmit()">
+            </div>
+
+            <div class="coolinput">
+                <label for="input" class="text">Password</label>
+                <input type="password" [(ngModel)] = "password" name="password" class="input" (keyup.enter)="onSubmit()">
+            </div>
+        </form>
+
+        <button class="button" (click)="onSubmit()">All good !</button>
+    }
+    @else{
+        <p>Looks like you're already logged. You can see your data !</p>
+        <button class="button" routerLink="/users" routerLinkActive="active" >Go to my data</button>
+    }
+    
+</div>
+

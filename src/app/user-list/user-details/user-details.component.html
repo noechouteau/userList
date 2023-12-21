@@ -1,0 +1,18 @@
+<div id="page">
+    @if(selectedUser && selectedUser.name){
+        <h1>Details</h1>
+        <div id="card">
+            <img src="{{selectedUser.avatar}}" alt="avatar" width="180" height="180">
+            <br> <div><strong>Name : </strong>{{selectedUser.name}}</div>
+            <br> <div><strong>Email : </strong>
+                {{selectedUser.email}}</div>
+            <br><div><strong>Bio : </strong>{{selectedUser.bio}}</div> 
+            <br><div><strong>Occupation : </strong>{{selectedUser.occupation}}</div>
+        </div> 
+    }
+    @else {
+        <h1>This user does not exist</h1>
+        }
+    <br><br>
+    <button mat-stroked-button routerLink="/users" routerLinkActive="active" >Back</button>
+</div>
